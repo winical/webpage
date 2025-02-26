@@ -1,41 +1,67 @@
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
 }
 
-.header{
+.header {
     width: 100%;
-    height: 80px;
-    display: block;
+    min-height: 100px; /* Increased min-height for more space */
+    display: flex; /* Use flexbox for the entire header */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     background-color: olivedrab;
-
+    box-sizing: border-box;
+    padding: 10px 0; /* Add padding for spacing around text */
 }
 
-
-.inner_headder{
-    width: 1000px;
-    height: 100%;
-    display: block;
+.inner_header {
+    width: 100%; /* Full width for responsiveness */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     margin: auto;
-    background-color: olivedrab;
 }
 
-
-.logo_cont{
-    height: 100%;
-    display: table;
-    float: left;
+.logo_cont {
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Center content horizontally */
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
-.logo_cont h1{
+.material-symbols-outlined {
+    font-size: 4vw; /* Adjust the size of the icon */
+    margin-right: 10px; /* Space between icon and text */
     color: white;
-    height: 100%;
-    display: table-cell;
-    vertical-align: middle;
-    font-family: Bebas Neue;
-    font-size: 30px;
 }
+
+.logo_cont h1 {
+    color: white;
+    font-family: Bebas Neue;
+    font-size: 5vw; /* Responsive font size based on viewport width */
+    word-spacing: 5px;
+    text-align: center; /* Center the text */
+    word-wrap: break-word; /* Prevent overflow by wrapping long text */
+}
+
+/* Media query to adjust font size on smaller screens */
+@media (max-width: 480px) {
+    .logo_cont h1 {
+        font-size: 8vw; /* Adjust font size for small screens */
+    }
+}
+
+/* Media query to cap font size on larger screens */
+@media (min-width: 1200px) {
+    .logo_cont h1 {
+        font-size: 60px; /* Set maximum font size for very large screens */
+    }
+}
+
 
 
