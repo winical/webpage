@@ -1,0 +1,61 @@
+body {
+    background: #021d25;
+    padding: 0px;
+    text-align: center;
+    border-radius: 0px;
+    font-family: Bebas Neue;
+    color: #ffffff;
+
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0a475a;
+    color: white;
+    vertical-align: bottom;
+}
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 10px;
+    vertical-align: bottom;
+}
+
+@font-face {
+    font-family: Bebas Neue;
+    src: url(https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap);
+  }
+  
+  div {
+    font-family: Bebas Neue;
+  }
+
+  header {
+    background-color: #0d3b34;
+    color: rgb(255, 255, 255);
+    padding: 5px 20px;  /* Shrink header by reducing padding */
+    display: flex;
+    align-items: center;  /* Align logo and text vertically */
+    justify-content: center; /* Center everything horizontally */
+    height: 60px;  /* Reduce header height */
+    position: relative;
+    font-family: Bebas Neue;;
+}
+
+/* Logo styling */
+header img {
+    width: 120px;  /* Shrink logo size */
+    height: auto;
+
+}
+/* Header text styling */
+header h2 {
+    font-size: 24px;  /* Reduce the font size of the header text */
+    font-weight: bold;
+    font-family: Bebas Neue;
+    letter-spacing: 0.2vw;
+    text-align: center; /* Center the header text */
+    flex-grow: 1; /* Allow the text to grow and occupy available space */
+}
