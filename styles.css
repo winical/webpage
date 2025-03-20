@@ -1,0 +1,279 @@
+/* General Body Styling */
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: #021d25;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.1vw;
+}
+
+/* Header Styling */
+header {
+    background-color: #0d3b34;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;  /* Adjusted padding for balance */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;  /* Increased header height for better spacing */
+    position: relative;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+header img {
+    width: 120px;
+    height: auto;
+}
+
+header a {
+    color: rgb(225, 255, 255);
+    text-decoration: none;
+}
+
+/* Header Text Styling */
+header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.2vw;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Container Styling */
+.container {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Styled Search Bar */
+.search-bar {
+    background: #0d3b34;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Search Input Styling */
+#search-input {
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    width: 50%;
+    background-color: #021d25;  /* Same background color as the search bar */
+    color: white;  /* Text color */
+}
+
+#search-input:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.7); /* Light glow effect when focused */
+    border-color: #3a6e7a;  /* Change border color on focus */
+    animation: focusAnimation 0.5s ease-out; /* Apply focus animation */
+}
+
+/* Focus Animation for Search Input */
+@keyframes focusAnimation {
+    0% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(0.99); /* Slightly grow the input */
+    }
+    100% {
+        transform: scale(1); /* Return to normal size */
+    }
+}
+
+/* Button Styling (If you have a button for the search) */
+.search-bar button {
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    background: #0a475a;
+    color: #f5fdff;
+    cursor: pointer;
+    transition: background 0.3s ease-in;
+}
+
+.search-bar button:hover {
+    background: #3a6e7a; /* Darker on hover */
+    transform: scale(1.05); /* Slight scaling on hover */
+}
+
+/* Courses Section Styling */
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+/* Course Card Styling */
+.course-card {
+    background: #0d3b34;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 2px 2px 10px #00212b;
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out; /* Smoother transition */
+}
+
+.course-card:hover {
+    transform: translateY(-8px);  /* Increased the distance for a more noticeable hover effect */
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2); /* Slightly larger shadow for hover effect */
+}
+
+.course-card img {
+    width: 100%;
+    border-radius: 10px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.course-card h3 {
+    font-size: 22px;
+    color: #ffffff;
+    margin: 15px 0;
+}
+
+.course-card a {
+    background: #0a475a;
+    color: #f5fdff;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s ease-in-out; /* Smoother background transition */
+}
+
+.course-card a:hover {
+    background: #3a6e7a;  /* Darker hover effect */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0a475a;
+    color: white;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* About Us Section Styling */
+.aboutus {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+/* About Us Card Styling */
+.aboutus-card {
+    background: #0d3b34;
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    height: 250px;
+    box-shadow: 2px 2px 10px #00212b;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out; /* Smoother transition */
+}
+
+.aboutus-card:hover {
+    transform: translateY(-8px);  /* Increased the distance for a more noticeable hover effect */
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2); /* Slightly larger shadow for hover effect */
+}
+
+.aboutus-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.aboutus-card h3 {
+    font-size: 22px;
+    color: #ffffff;
+}
+
+/* Search Input Styling */
+#search-input {
+    padding: 10px;
+    width: 50%;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid #0b3115;
+}
+
+#search-input:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust Course Cards */
+    .course-card {
+        width: 45%;
+    }
+
+    .course-card{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutus-card {
+        width: 200px;
+        height: 200px;
+    }
+
+    .search-bar input,
+    .search-bar button {
+        width: 80%;
+    }
+
+    /* Stack the header elements on small screens */
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    /* Stack About Us cards on smaller screens */
+    .aboutus {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust Footer layout */
+    footer {
+        font-size: 14px;
+    }
+}
