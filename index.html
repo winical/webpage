@@ -6,21 +6,21 @@
     <title>Golf Booking Website</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="icon" type="img/ico" href="favicon.ico"
+    <link rel="icon" type="image/ico" href="favicon.ico">
 </head>
 <body>
     <header>
         <img src="logo.png" alt="Golf Booking Logo">
         <h2>Golf Course Booking</h2>
+        <a href="login.html" class="login-button">Login</a>
     </header>
     
     <div class="container">
         <div class="search-bar">
-            <input type="text" placeholder="Search for a golf course">
-            <button>Search</button>
+            <input type="text" id="search-input" placeholder="Search for a golf course" onkeyup="searchCourses()">
         </div>
         
-        <div class="courses">
+        <div class="courses" id="course-list">
             <div class="course-card">
                 <img src="golf-course-1.jpg" onerror="this.onerror=null; this.src='logo.png';" alt="Golf Course 1">
                 <h3>Camperdown</h3>
@@ -40,8 +40,33 @@
                 <a href="peterborough.html" class="book-button">Book Now</a>
             </div>
         </div>
+
+        <!-- No Results Message -->
+        <p id="no-results" style="display: none; text-align: center; font-weight: bold;">No courses found</p>
     </div>
     
+    <script>
+        function searchCourses() {
+            let input = document.getElementById("search-input").value.toLowerCase();
+            let courses = document.getElementsByClassName("course-card");
+            let noResults = document.getElementById("no-results");
+            let found = false;
+
+            for (let i = 0; i < courses.length; i++) {
+                let courseName = courses[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
+                if (courseName.includes(input)) {
+                    courses[i].style.display = "block";
+                    found = true;
+                } else {
+                    courses[i].style.display = "none";
+                }
+            }
+
+            // Show "No Results" message if nothing matches
+            noResults.style.display = found ? "none" : "block";
+        }
+    </script>
+
 </body>
 <footer>
     <a href="aboutus.html" class="link">About Us</a>
