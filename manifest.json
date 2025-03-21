@@ -3,7 +3,7 @@
   "name": "GREEN LINK: Golf Booking Made Easy",
   "display": "standalone",
   "id": "/?source=pwa",
-  "start_url": "/?source=pwa",
+  "start_url": "/webpage/",
   "icons": [
       {
           "src": "apple-touch-icon.png",
